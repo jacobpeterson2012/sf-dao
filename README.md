@@ -1,6 +1,5 @@
 
 # sf-dao pattern
-
 Simple pattern for DAO operations.
 
 This purpose of this is to:
@@ -9,7 +8,6 @@ This purpose of this is to:
 - Allow for simple way to mock DAO operations.
 
 ## Framework Classes
-
 ### DAOSelection
 This is the result of a selection command.  This has the return results from the the command and helper methods to work with results.
 
@@ -25,3 +23,10 @@ Example class of differnt commands to select account information - could be sepe
 
 ### example
 Example of executing comamnd and working with results.
+
+## problems..
+- we end up with lots of commands its always a mess
+- people try to resuse and SOQL ends up not being selective as its used for more than one client
+- decouple compile depedancy
+
+Todo: dynamic command builder?
