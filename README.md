@@ -14,7 +14,7 @@ This purpose of this is to:
 This is the result of a selection command.  This has the return results from the the command and helper methods to work with results.
 
 ### DAOSelectRecords
-This is the class that executes a comment.  Its responsible for logging etc.
+This is the class that executes a command.  Its responsible for logging etc.
 
 ### DAOCommand
 Interface for commands.
