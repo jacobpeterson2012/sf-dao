@@ -13,6 +13,8 @@ public with sharing class example {
         DAOSelection selectionResult = DAOSelectRecords.execute(accountByIdDAO);
         System.debug(selectionResult.recordList());
         System.debug(selectionResult.recordMap());
+        System.debug(selectionResult.filter('AccountNumber', 'abc'));
+
     }
 
     public void doSomethingWithByState(String state) {

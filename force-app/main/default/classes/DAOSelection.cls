@@ -13,12 +13,20 @@ public with sharing class DAOSelection {
         return results;
     }
 
-    public Set<Id> idToSet() {
-        Set<Id> ids = new Set<Id>();
-        for (Id i : this.results.keySet()) {
-            ids.add(i);
+    public Set<Id> ids() {
+        return this.results.keySet();
+    }
+
+    public List<SObject> filter(String fieldName, Object filterValue) {
+        List<SObject> results = new List<SObject>();
+
+        for (SObject o : this.results.values()){
+            if (o.get(fieldName) == filterValue) {
+                results.add(o);
+            }
         }
-        return ids;
+
+        return results;
     }
 
     public DAOSelection(Map<Id, SObject> results) {

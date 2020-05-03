@@ -11,7 +11,7 @@ public with sharing class AccountDAOCommands {
         }
 
         public List<SObject> execute() {
-            return [SELECT id, Name
+            return [SELECT id, Name, AccountNumber
                     FROM Account
                     WHERE id =: this.id
                     ];
@@ -29,7 +29,7 @@ public with sharing class AccountDAOCommands {
         }
 
         public List<SObject> execute() {
-            return [SELECT id, Name
+            return [SELECT id, Name, AccountNumber
                     FROM Account
                     WHERE BillingState =: this.billingState
                     ];
